@@ -1,0 +1,6 @@
+<div class="movie-card">
+    <a [routerLink]="['/movie', movie.imdbID]" class="poster" [ngStyle]="{'background': 'url('+movie.Poster+') center'}"></a>
+    <div class="title">{{movie.Title}}</div>
+    <div class="year">{{movie.Year}}</div>
+    <a href="https://www.imdb.com/title/{{movie.imdbID}}/" target="_blank" class="imdb"><img src="assets/icon-2.png" alt=""></a>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <a class="btn" [routerLink]="['/']">Back</a>
+    <div class="movie" *ngIf="(movie$ | async) as movie">
+        <div class="poster" >
+            <img [src]="movie.Poster" alt="{{movie.Title}}">
+        </div>
+        <div class="details">
+            <div class="type">{{movie.Type}}</div>
+            <div class="title">{{movie.Title}}</div>
+            <div class="year">{{movie.Year}}</div>
+            
+            <div class="genre-runtime">
+                <span>🎥</span>
+                <span class="genre">{{movie.Genre}}</span>
+                <span>●</span>
+                <span class="runtime">{{movie.Runtime}}</span>
+
+            </div>
+
+            <div class="plot">{{movie.Plot}}</div>
+
+
+            <div class="caption">Ratings</div>
+            <div class="ratings">
+                
+                <div class="rating" *ngFor="let rating of movie.Ratings">
+                    <div class="source">{{rating.Source}}</div>
+                    <div class="value">{{rating.Value}}</div>
+                </div>
+            </div>
+
+
+            <div class="small-caption">Actors</div>
+            <div class="info actors">{{movie.Actors}}</div>
+
+            <div class="small-caption">Director</div>
+            <div class="info director">{{movie.Director}}</div>
+
+            <div class="small-caption">Writer</div>
+            <div class="info writer">{{movie.Writer}}</div>
+
+
+            
+            <div class="small-caption">Language</div>
+            <div class="info language">{{movie.Language}}</div>
+
+            <div class="small-caption">Country</div>
+            <div class="info country">{{movie.Country}}</div>
+
+
+            <div class="small-caption">Box Office</div>
+            <div class="info boxOffice">{{movie.BoxOffice}}</div>
+
+
+        </div>
+    </div>
+</div>
+<!-- /.container -->

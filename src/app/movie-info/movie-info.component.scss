@@ -1,0 +1,103 @@
+.btn{
+    width: 100px;
+}
+.movie {
+    display: flex;
+    align-items: flex-start;
+    margin: 25px 0 0 0;
+
+    .poster {
+        min-width: 300px;
+
+        border: 10px #fff solid;
+        box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+    }
+
+    .details {
+        flex: 1;
+        margin-left: 25px;
+
+        .type {
+            font-size: 14px;
+            color: #333;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+        }
+        .year {
+            font-size: 14px;
+            color: #333;
+        }
+        .genre-runtime {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 0 0;
+            display: flex;
+            align-items: center;
+
+            .genre {
+                margin: 0 5px;
+            }
+            .runtime {
+                margin: 0 0 0 5px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .plot {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 10px 0;
+        }
+
+        .caption {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 900;
+            background: -webkit-linear-gradient(
+                68deg,
+                rgb(2, 0, 36) 0%,
+                rgb(252 218 124) 0%,
+                rgb(249, 208, 76) 0%,
+                rgb(246 31 22) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .small-caption {
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0 0 0 0;
+        }
+        .ratings {
+            display: flex;
+            margin: 0 -10px 10px -10px;
+
+            .rating {
+                flex: 1;
+
+                margin: 10px;
+                padding: 10px;
+                box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+                text-align: center;
+
+                .source {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+                .value {
+                    margin: 5px 0 0 0;
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .info{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+}

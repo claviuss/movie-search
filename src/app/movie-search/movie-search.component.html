@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="head">
+        <img src="assets/icon-1.png" alt="*">
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="search-bar">
+        <div class="form-input title">
+            <label for="title">Title</label>
+            <input type="text" id="title" formControlName="title" placeholder="Search By Movie Title...">
+        </div>
+        <div class="form-input type">
+            <label for="type">Type</label>
+            <select id="type" formControlName="type">
+                <option value="">All</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+        </div>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="results" *ngIf="(movies$ | async) as movies">
+        <app-movie-card [movie]="movie" *ngFor="let movie of movies"></app-movie-card>
+        <div class="not-found" *ngIf="movies.length===0">
+            <img src="assets/icon-3.png" alt="*">
+            <span>Movie not found</span>
+        </div>
+    </div>
+</div>

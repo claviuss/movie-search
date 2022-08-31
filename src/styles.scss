@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+label{
+    margin: 0 0 5px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input,
+select {
+    font-family: "Montserrat", sans-serif;
+
+    border: none;
+    background: none;
+    outline: none;
+
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 14px;
+
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.1);
+
+    &:focus {
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.25);
+    }
+}
+
+.btn,
+button {
+    font-family: "Montserrat", sans-serif;
+
+    border: none;
+    background: none;
+    outline: none;
+
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 14px;
+
+
+    cursor: pointer;
+
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(68deg, rgb(2, 0, 36) 0%, rgb(252 218 124) 0%, rgb(249, 208, 76) 0%, rgb(246 31 22) 100%);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
