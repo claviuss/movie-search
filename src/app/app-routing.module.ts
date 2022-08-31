@@ -8,8 +8,3 @@ export const routes: Routes = [
   { path: 'movie/:imdbID', title:'Movie Information', loadComponent: () => import('./movie-info/movie-info.component').then(m => m.MovieInfoComponent) }
 ];
 
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
