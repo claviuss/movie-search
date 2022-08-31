@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Observable, of, switchMap, tap } from 'rxjs';
 import { MovieBase } from './movie-base.class';
+import { Movie } from '../movies.model';
 
 @Component({
   selector: 'app-movie-info',
@@ -13,7 +14,7 @@ import { MovieBase } from './movie-base.class';
 })
 export class MovieInfoComponent extends MovieBase implements OnInit {
 
-  movie$: Observable<any | undefined>
+  movie$: Observable<Movie | undefined>
 
   constructor() {
     super()
